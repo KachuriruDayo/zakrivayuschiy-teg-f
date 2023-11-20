@@ -12,3 +12,53 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes active_menu-animation {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes button_hover {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes button_hover-out {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes focus_boxshadow {
+  0% {
+    box-shadow: 0px 0px 0px 0px var(--themes-main-color);
+  }
+
+  100% {
+    box-shadow: 2px 2px 0px 0px var(--themes-main-color);
+  }
+}
+
+@keyframes focus_boxshadow-out {
+  0% {
+    box-shadow: 2px 2px 0px 0px var(--themes-main-color);
+  }
+
+  100% {
+    box-shadow: 0px 0px 0px 0px var(--themes-main-color);
+  }
+}

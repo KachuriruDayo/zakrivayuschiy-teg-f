@@ -4,3 +4,51 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --themes-main-color: #000;
+    --color-button-text: #fff;
+    --bg-color: #fff;
+    --normal_weight: 400;
+    --bold_weight: 700;
+    --bg-gradient: repeating-linear-gradient(90deg, #E7E7E7 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #E7E7E7 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-auto {
+    --themes-main-color: #00CC14;
+    --color-button-text: #00CC14;
+    --bg-color: #000;
+    --normal_weight: 465; 
+    --bold_weight: 785;
+    --bg-gradient: repeating-linear-gradient(90deg, #000 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #007f0c 0%, #004306 100%);
+  }
+}
+
+:root.theme-light {
+  --themes-main-color: #000;
+  --color-button-text: #fff;
+  --bg-color: #fff;
+  --normal_weight: 400;
+  --bold_weight: 700;
+  --bg-gradient: repeating-linear-gradient(90deg, #E7E7E7 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #E7E7E7 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
+}
+
+:root.theme-dark {
+  --themes-main-color: #00CC14;
+  --color-button-text: #00CC14;
+  --bg-color: #000;
+  --normal_weight: 465; 
+  --bold_weight: 785;
+  --bg-gradient: repeating-linear-gradient(90deg, #000 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #007f0c 0%, #004306 100%);
+}
