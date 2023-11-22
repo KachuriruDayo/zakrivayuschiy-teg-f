@@ -62,3 +62,47 @@
     box-shadow: 0px 0px 0px 0px var(--themes-main-color);
   }
 }
+
+@keyframes focus_icon {
+  0% {
+    outline: 2px solid transparent;
+  }
+
+  100% {
+    outline: 2px solid var(--themes-main-color);
+  }
+}
+
+@keyframes focus_icon-out {
+  0% {
+    outline: 2px solid var(--themes-main-color);
+  }
+
+  100% {
+    outline: 2px solid transparent;
+  }
+}
+
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sparks {
+  0% {
+    fill: transparent;
+  }
+
+  50% {
+    fill: #FF0000;
+  }
+
+  100% {
+    fill: transparent;
+  }
+}
