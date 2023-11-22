@@ -6,6 +6,8 @@
     --main-heart_color: #FF0000;
     --accent-font: 'PressStart2P';
     --main-font: 'Inter', sans-serif;
+    --small: 14px;
+    --medium: 18px;
     --normal_weight: 400;
     --bold_weight: 700;
     --bg-gradient: repeating-linear-gradient(90deg, #E7E7E7 0px 2px, transparent 2px 4px),
