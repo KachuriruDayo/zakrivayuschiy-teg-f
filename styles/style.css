@@ -102,11 +102,11 @@
 .theme-menu__button::after {
   content: "";
   display: block;
-  height: 3px; 
-  width: 0%; 
+  height: 3px;
+  width: 0%;
   background-color: var(--themes-main-color);
   opacity: 0.6;
-  transition: width 0.3s ease-in-out; 
+  transition: width 0.3s ease-in-out;
 }
 
 .theme-menu__button:focus-visible:after {
@@ -205,34 +205,24 @@
   text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: 
-		-0   -1px 0   var(--bg-color),
-		 0   -1px 0   var(--bg-color),
-		-0    1px 0   var(--bg-color),
-		 0    1px 0   var(--bg-color),
-		-1px -0   0   var(--bg-color),
-		 1px -0   0   var(--bg-color),
-		-1px  0   0   var(--bg-color),
-		 1px  0   0   var(--bg-color),
-		-1px -1px 0   var(--bg-color),
-		 1px -1px 0   var(--bg-color),
-		-1px  1px 0   var(--bg-color),
-		 1px  1px 0   var(--bg-color),
-		-1px -1px 0   var(--bg-color),
-		 1px -1px 0   var(--bg-color),
-		-1px  1px 0   var(--bg-color),
-		 1px  1px 0   var(--bg-color);
+  text-shadow: -0 -1px 0 var(--bg-color), 0 -1px 0 var(--bg-color),
+    -0 1px 0 var(--bg-color), 0 1px 0 var(--bg-color), -1px -0 0 var(--bg-color),
+    1px -0 0 var(--bg-color), -1px 0 0 var(--bg-color), 1px 0 0 var(--bg-color),
+    -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
+    -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color),
+    -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
+    -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
   top: 28px;
   right: 23px;
   z-index: 1;
-  }
+}
 
-  @supports (-webkit-text-stroke: 1px var(--bg-color)) {
-    .image_watermark {
-      -webkit-text-stroke: 1px var(--bg-color);
-      text-shadow: none;
-    }
+@supports (-webkit-text-stroke: 1px var(--bg-color)) {
+  .image_watermark {
+    -webkit-text-stroke: 1px var(--bg-color);
+    text-shadow: none;
   }
+}
 
 .section_image {
   display: block;
@@ -265,7 +255,7 @@
 }
 
 .mix {
-  filter: hue-rotate(100deg) saturate(150%) blur(2px) contrast(50%); 
+  filter: hue-rotate(100deg) saturate(150%) blur(2px) contrast(50%);
 }
 
 .card_content {
@@ -343,7 +333,6 @@
   transition: fill 0.3s linear;
 }
 
-
 .like-icon.is-liked .main-body {
   fill: var(--main-heart_color);
   transition: fill 0.3s linear 0.03s;
@@ -408,7 +397,7 @@
   mix-blend-mode: difference;
   z-index: 1;
   inline-size: 28px;
-  block-size:  28px;
+  block-size: 28px;
 }
 
 dialog {
@@ -430,7 +419,7 @@ dialog::backdrop {
 dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
-} 
+}
 
 .dialog_content {
   display: flex;
@@ -480,14 +469,14 @@ dialog:not([open]) {
   }
 
   .floppy {
-    inline-size: 21px; 
-    block-size:  21px;
+    inline-size: 21px;
+    block-size: 21px;
   }
 
   .save_button {
     flex-direction: row;
-    inline-size: 335px;  
-    block-size: 51px;  
+    inline-size: 335px;
+    block-size: 51px;
   }
 
   dialog {

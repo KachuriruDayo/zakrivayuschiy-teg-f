@@ -12,22 +12,30 @@
     --bg-color: #fff;
     --normal_weight: 400;
     --bold_weight: 700;
-    --bg-gradient: repeating-linear-gradient(90deg, #E7E7E7 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #E7E7E7 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
+    --bg-gradient: repeating-linear-gradient(
+        90deg,
+        #e7e7e7 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #e7e7e7 0px 2px, transparent 2px 4px),
+      linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root.theme-auto {
-    --themes-main-color: #00CC14;
-    --color-button-text: #00CC14;
+    --themes-main-color: #00cc14;
+    --color-button-text: #00cc14;
     --bg-color: #000;
-    --normal_weight: 465; 
+    --normal_weight: 465;
     --bold_weight: 785;
-    --bg-gradient: repeating-linear-gradient(90deg, #000 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #007f0c 0%, #004306 100%);
+    --bg-gradient: repeating-linear-gradient(
+        90deg,
+        #000 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
+      linear-gradient(180deg, #007f0c 0%, #004306 100%);
   }
 }
 
@@ -37,18 +45,26 @@
   --bg-color: #fff;
   --normal_weight: 400;
   --bold_weight: 700;
-  --bg-gradient: repeating-linear-gradient(90deg, #E7E7E7 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #E7E7E7 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
+  --bg-gradient: repeating-linear-gradient(
+      90deg,
+      #e7e7e7 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #e7e7e7 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
 }
 
 :root.theme-dark {
-  --themes-main-color: #00CC14;
-  --color-button-text: #00CC14;
+  --themes-main-color: #00cc14;
+  --color-button-text: #00cc14;
   --bg-color: #000;
-  --normal_weight: 465; 
+  --normal_weight: 465;
   --bold_weight: 785;
-  --bg-gradient: repeating-linear-gradient(90deg, #000 0px 2px, transparent 2px 4px),
+  --bg-gradient: repeating-linear-gradient(
+      90deg,
+      #000 0px 2px,
+      transparent 2px 4px
+    ),
     repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
     linear-gradient(180deg, #007f0c 0%, #004306 100%);
 }
