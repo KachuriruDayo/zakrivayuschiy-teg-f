@@ -25,7 +25,7 @@
 
 @supports (font-variation-settings: normal) {
   .page {
-    font-variation-settings: "wght" var(--normal-weight);;
+    font-variation-settings: "wght" var(--normal_weight);
   }
 }
 
@@ -176,18 +176,18 @@
   outline: 2px solid var(--themes-main-color);
 }
 
-@supports (font-variation-settings: normal) {
-  .section_title {
-    font-variation-settings: "wght" var(--bold_weight);
-  }
-}
-
 .section_title {
   color: var(--themes-main-color);
   font-family: var(--main-font);
   font-size: var(--medium);
   font-weight: var(--bold_weight);
   padding: 4px 10px 8px;
+}
+
+@supports (font-variation-settings: normal) {
+  .section_title {
+    font-variation-settings: "wght" var(--bold_weight);
+  }
 }
 
 .image_container {
@@ -201,7 +201,7 @@
   color: var(--themes-main-color);
   font-family: var(--accent-font);
   font-size: var(--small);
-  font-weight: var(--normal-weight);
+  font-weight: var(--normal_weight);
   text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
@@ -225,6 +225,13 @@
   top: 28px;
   right: 23px;
   z-index: 1;
+  }
+
+  @supports (-webkit-text-stroke: 1px var(--bg-color)) {
+    .image_watermark {
+      -webkit-text-stroke: 1px var(--bg-color);
+      text-shadow: none;
+    }
   }
 
 .section_image {
@@ -269,7 +276,6 @@
   color: var(--themes-main-color);
   font-family: var(--main-font);
   font-size: var(--medium);
-  font-weight: var(--normal_weight);
 }
 
 .section_text:nth-of-type(2) {
@@ -444,7 +450,7 @@ dialog:not([open]) {
   color: var(--themes-main-color);
   font-family: var(--accent-font);
   font-size: var(--small);
-  font-weight: 400;
+  font-weight: var(--normal_weight);
   line-height: 1.5;
   text-transform: uppercase;
 }

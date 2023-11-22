@@ -1,16 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --themes-main-color: #000;
-    --color-button-text: #fff;
-    --bg-color: #fff;
     --main-heart_color: #FF0000;
     --accent-font: 'PressStart2P';
     --main-font: 'Inter', sans-serif;
     --small: 14px;
     --medium: 18px;
-    --normal_weight: 400;
-    --bold_weight: 700;
-    --bg-gradient: repeating-linear-gradient(90deg, #E7E7E7 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #E7E7E7 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
 }
