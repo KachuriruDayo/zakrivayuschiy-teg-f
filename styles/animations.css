@@ -13,6 +13,65 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+
+.like-icon .contour {
+  transition: fill 0.1s linear;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--themes-main-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--themes-main-color);
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--main-heart_color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .core {
+  fill: var(--main-heart_color);
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--main-heart_color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--main-heart_color);
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--main-heart_color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: scale-heart 0.3s ease-in 0.1s alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s alternate;
+}
+
 @keyframes active_menu-animation {
   0% {
     transform: translateX(0px);
@@ -20,66 +79,6 @@
 
   100% {
     transform: translateX(4px);
-  }
-}
-
-@keyframes button_hover {
-  0% {
-    transform: scaleX(0);
-  }
-
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-@keyframes button_hover-out {
-  0% {
-    transform: scaleX(1);
-  }
-
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-@keyframes focus_boxshadow {
-  0% {
-    box-shadow: 0px 0px 0px 0px var(--themes-main-color);
-  }
-
-  100% {
-    box-shadow: 2px 2px 0px 0px var(--themes-main-color);
-  }
-}
-
-@keyframes focus_boxshadow-out {
-  0% {
-    box-shadow: 2px 2px 0px 0px var(--themes-main-color);
-  }
-
-  100% {
-    box-shadow: 0px 0px 0px 0px var(--themes-main-color);
-  }
-}
-
-@keyframes focus_icon {
-  0% {
-    outline: 2px solid transparent;
-  }
-
-  100% {
-    outline: 2px solid var(--themes-main-color);
-  }
-}
-
-@keyframes focus_icon-out {
-  0% {
-    outline: 2px solid var(--themes-main-color);
-  }
-
-  100% {
-    outline: 2px solid transparent;
   }
 }
 

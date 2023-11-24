@@ -6,7 +6,7 @@
 */
 
 @media (prefers-color-scheme: light) {
-  :root.theme-auto {
+  :root {
     --themes-main-color: #000;
     --color-button-text: #fff;
     --bg-color: #fff;
@@ -14,16 +14,16 @@
     --bold_weight: 700;
     --bg-gradient: repeating-linear-gradient(
         90deg,
-        #e7e7e7 0px 2px,
+        #fff 0px 2px,
         transparent 2px 4px
       ),
-      repeating-linear-gradient(180deg, #e7e7e7 0px 2px, transparent 2px 4px),
-      linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+      repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
+      linear-gradient(180deg, #fff 0%, #1a1a1a 100%);
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root.theme-auto {
+  :root {
     --themes-main-color: #00cc14;
     --color-button-text: #00cc14;
     --bg-color: #000;
@@ -47,11 +47,11 @@
   --bold_weight: 700;
   --bg-gradient: repeating-linear-gradient(
       90deg,
-      #e7e7e7 0px 2px,
+      #fff 0px 2px,
       transparent 2px 4px
     ),
-    repeating-linear-gradient(180deg, #e7e7e7 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+    repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #fff 0%, #1a1a1a 100%);
 }
 
 :root.theme-dark {

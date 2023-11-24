@@ -13,13 +13,13 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-
 .page {
   display: grid;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--bg-gradient);
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -32,7 +32,7 @@
 .header {
   display: grid;
   align-items: center;
-  padding: 120px 14px 25px;
+  padding: 120px 14px 21px;
   border: 2px solid var(--themes-main-color);
   margin-block-start: 102px;
   margin-block-end: 100px;
@@ -46,7 +46,7 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-weight: var(--normal_weight);
   text-transform: uppercase;
-  margin-block-end: 20px;
+  margin-block-end: 18px;
 }
 
 .header_discription {
@@ -66,7 +66,7 @@
 .theme-menu__list {
   display: grid;
   justify-content: center;
-  gap: 14px;
+  gap: 9px;
 }
 
 .theme-menu__item {
@@ -83,7 +83,7 @@
   text-transform: uppercase;
   border: none;
   background-color: transparent;
-  block-size: 14px;
+  min-block-size: 14px;
   margin-inline-start: 20px;
   opacity: 1;
   cursor: pointer;
@@ -122,6 +122,7 @@
   content: "▶";
   position: absolute;
   left: -15px;
+  top: 0px;
   color: var(--themes-main-color);
   font-family: var(--accent-font);
   font-size: var(--small);
@@ -136,34 +137,38 @@
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   padding: 9px 17px;
   border: 2px solid var(--themes-main-color);
   background-color: transparent;
   cursor: pointer;
-  animation: focus_boxshadow-out 0.3s ease-in-out forwards;
+  box-shadow: 2px 2px 0px 0px transparent;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .button:focus-visible {
   outline: none;
-  animation: focus_boxshadow 0.3s ease-in-out forwards;
+  box-shadow: 2px 2px 0px 0px var(--themes-main-color);
 }
 
 .button::after {
   content: "";
   position: absolute;
   display: block;
-  inline-size: 100%;
+  width: 0%;
   block-size: 100%;
   left: 0px;
   top: 0px;
   background-color: var(--themes-main-color);
   transform-origin: left center;
-  animation: button_hover-out 0.5s ease-in-out forwards;
+  transition: width 0.5s ease-in-out;
 }
 
 .button:hover::after {
-  animation: button_hover 0.5s ease-in-out forwards;
+  width: 100%;
 }
 
 .content_section:nth-of-type(1) {
@@ -171,7 +176,7 @@
 }
 
 .content_section {
-  margin-block-start: 50px;
+  margin-block-start: 53px;
   background-color: var(--bg-color);
   outline: 2px solid var(--themes-main-color);
 }
@@ -181,7 +186,7 @@
   font-family: var(--main-font);
   font-size: var(--medium);
   font-weight: var(--bold_weight);
-  padding: 4px 10px 8px;
+  padding: 7px 10px 8px;
 }
 
 @supports (font-variation-settings: normal) {
@@ -202,7 +207,6 @@
   font-family: var(--accent-font);
   font-size: var(--small);
   font-weight: var(--normal_weight);
-  text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow: -0 -1px 0 var(--bg-color), 0 -1px 0 var(--bg-color),
@@ -212,21 +216,23 @@
     -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color),
     -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
     -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
-  top: 28px;
-  right: 23px;
+  top: 23px;
+  right: 13px;
   z-index: 1;
 }
 
-@supports (-webkit-text-stroke: 1px var(--bg-color)) {
+@supports ((-webkit-text-stroke: 1px var(--bg-color)) or (text-stroke: 1px var(--bg-color))) {
   .image_watermark {
-    -webkit-text-stroke: 1px var(--bg-color);
     text-shadow: none;
+    text-stroke: 1px var(--bg-color);
+    -webkit-text-stroke: 1px var(--bg-color);
   }
 }
 
 .section_image {
   display: block;
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
 }
 
@@ -259,20 +265,19 @@
 }
 
 .card_content {
-  padding: 25px 23px;
+  padding: 0px 27px;
 }
 
 .section_text {
+  margin-block-start: 25px;
   color: var(--themes-main-color);
   font-family: var(--main-font);
   font-size: var(--medium);
 }
 
-.section_text:nth-of-type(2) {
-  margin: 27px 0 24px;
-}
-
 .buttons_container {
+  margin-block-start: 25px;
+  margin-block-end: 23.9px;
   display: flex;
   gap: 6px;
   justify-content: right;
@@ -286,9 +291,10 @@
   border: none;
   padding: 0px;
   background-color: transparent;
-  block-size: 36px;
+  min-block-size: 36px;
   cursor: pointer;
-  animation: focus_icon-out 0.3s ease forwards;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -296,73 +302,12 @@
 }
 
 .card__icon-button:focus-visible {
-  animation: focus_icon 0.3s ease forwards;
-}
-
-.like-icon .contour {
-  transition: fill 0.1s linear;
-}
-
-.like-icon .main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.like-icon .core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--themes-main-color);
-  transition: fill 0.3s linear 0.03s;
-}
-
-.like-icon:hover .core {
-  fill: var(--themes-main-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:active .main-body {
-  fill: var(--main-heart_color);
-  transition: fill 0.3s linear 0.03s;
-}
-
-.like-icon:active .core {
-  fill: var(--main-heart_color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--main-heart_color);
-  transition: fill 0.3s linear 0.03s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--main-heart_color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--main-heart_color);
-  transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation: scale-heart 0.3s ease-in 0.1s;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s;
+  outline: 2px solid var(--themes-main-color);
 }
 
 .card__like-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   inline-size: 130px;
-  block-size: 40px;
+  min-block-size: 37px;
 }
 
 .button__text {
@@ -372,23 +317,18 @@
   font-size: var(--small);
   font-weight: var(--normal_weight);
   line-height: 0.9;
-  text-transform: uppercase;
   mix-blend-mode: difference;
   z-index: 1;
 }
 
 .save_button {
   justify-self: center;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-block-start: 54px;
+  margin-block-start: 52px;
   margin-block-end: 102px;
   background-color: var(--bg-color);
-  border: 2px solid var(--themes-main-color);
-  inline-size: 306px;
-  block-size: 80px;
+  inline-size: 311px;
+  min-block-size: 84px;
   gap: 8px;
 }
 
@@ -408,7 +348,7 @@ dialog {
   border: 2px solid var(--themes-main-color);
   background-color: var(--bg-color);
   inline-size: 341px;
-  block-size: 195px;
+  min-block-size: 195px;
   gap: 30px;
 }
 
@@ -446,26 +386,41 @@ dialog:not([open]) {
 
 .close {
   inline-size: 257px;
-  block-size: 38px;
+  min-block-size: 38px;
 }
 
 @media (width >= 500px) {
   .header {
-    padding: 133px 14px 25px;
+    padding: 133px 14px 21px;
     justify-self: center;
-    inline-size: clamp(30.625rem, 23.7766rem + 21.9149vw, 43.5rem);
+    inline-size: clamp(30rem, 22.8191rem + 22.9787vw, 43.5rem);
   }
+
+  .header_title {
+    margin-block-end: 21px;
+  }
+
   .content {
     display: grid;
   }
 
   .content_section {
     justify-self: center;
-    inline-size: clamp(30.625rem, 23.7766rem + 21.9149vw, 43.5rem);
+    inline-size: clamp(30rem, 22.8191rem + 22.9787vw, 43.5rem);
+    margin-block-start: 54px;
   }
 
   .card_content {
-    padding-block-start: 30px;
+    padding-inline-end: 23px;
+  }
+
+  .image_watermark {
+    right: 28px;
+    top: 23px;
+  }
+
+  .buttons_container {
+    margin-block-start: 28.1px;
   }
 
   .floppy {
@@ -475,12 +430,12 @@ dialog:not([open]) {
 
   .save_button {
     flex-direction: row;
-    inline-size: 335px;
-    block-size: 51px;
+    inline-size: 339px;
+    min-block-size: 55px;
   }
 
   dialog {
     inline-size: 357px;
-    block-size: 193px;
+    min-block-size: 193px;
   }
 }
