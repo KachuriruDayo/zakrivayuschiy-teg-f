@@ -348,7 +348,6 @@ dialog {
   border: 2px solid var(--themes-main-color);
   background-color: var(--bg-color);
   inline-size: 341px;
-  min-block-size: 195px;
   gap: 30px;
 }
 
@@ -436,6 +435,5 @@ dialog:not([open]) {
 
   dialog {
     inline-size: 357px;
-    min-block-size: 193px;
   }
 }
