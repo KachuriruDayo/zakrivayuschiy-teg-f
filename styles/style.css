@@ -345,9 +345,10 @@ dialog {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-inline-size: 341px;
+  padding: 32px 41px;
   border: 2px solid var(--themes-main-color);
   background-color: var(--bg-color);
-  inline-size: 341px;
   gap: 30px;
 }
 
@@ -369,6 +370,7 @@ dialog:not([open]) {
 
 .floppy_dialog {
   color: var(--themes-main-color);
+  flex-shrink: 0;
   inline-size: 39px;
   block-size: 39px;
 }
@@ -383,8 +385,12 @@ dialog:not([open]) {
   text-transform: uppercase;
 }
 
+.form {
+  inline-size: 100%;
+}
+
 .close {
-  inline-size: 257px;
+  inline-size: 100%;
   min-block-size: 38px;
 }
 
@@ -435,5 +441,6 @@ dialog:not([open]) {
 
   dialog {
     inline-size: 357px;
+    padding: 31.5px 32.5px;
   }
 }
