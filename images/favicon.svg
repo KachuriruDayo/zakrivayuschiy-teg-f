@@ -10,10 +10,10 @@
   }
 </style>
 <g id="favicon">
-<path d="M128 128H160V160H128V128Z" fill="black"/>
-<path d="M96 128V96H128V128H96Z" fill="black"/>
-<path d="M96 128V160H64V128H96Z" fill="black"/>
-<path d="M192 64H160V96H192V64Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V256H256V0H0ZM224 224H160V192H192V160H224V224ZM160 160H192V128H224V32H32V160H64V192H32V224H128V192H160V160Z" fill="black"/>
+<path d="M128 128H160V160H128V128Z" fill="none"/>
+<path d="M96 128V96H128V128H96Z" fill="none"/>
+<path d="M96 128V160H64V128H96Z" fill="none"/>
+<path d="M192 64H160V96H192V64Z" fill="none"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V256H256V0H0ZM224 224H160V192H192V160H224V224ZM160 160H192V128H224V32H32V160H64V192H32V224H128V192H160V160Z" fill="none"/>
 </g>
 </svg>
