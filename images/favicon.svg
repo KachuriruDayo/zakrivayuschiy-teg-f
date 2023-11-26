@@ -1,19 +1,14 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-<style>
-  path {
-    fill: black;
-  }
-  @media (prefers-color-scheme: dark) {
-    path {
-      fill: #00CC14;
-    }
-  }
-</style>
-<g id="favicon">
-<path d="M128 128H160V160H128V128Z" fill="none"/>
-<path d="M96 128V96H128V128H96Z" fill="none"/>
-<path d="M96 128V160H64V128H96Z" fill="none"/>
-<path d="M192 64H160V96H192V64Z" fill="none"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V256H256V0H0ZM224 224H160V192H192V160H224V224ZM160 160H192V128H224V32H32V160H64V192H32V224H128V192H160V160Z" fill="none"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 256 256">
+  <style>
+      path {
+        fill: #000;
+      }
+     @media (prefers-color-scheme: dark) {
+      path {
+        fill: #00cc14;
+      }
+     }
+  </style>
+  <path fill="none" d="M128 128h32v32h-32v-32ZM96 128V96h32v32H96ZM96 128v32H64v-32h32ZM192 64h-32v32h32V64Z"/>
+  <path fill="none" fill-rule="evenodd" d="M0 0v256h256V0H0Zm224 224h-64v-32h32v-32h32v64Zm-64-64h32v-32h32V32H32v128h32v32H32v32h96v-32h32v-32Z" clip-rule="evenodd"/>
 </svg>

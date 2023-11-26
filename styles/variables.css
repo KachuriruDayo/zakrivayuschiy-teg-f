@@ -5,4 +5,16 @@
     --main-font: 'Inter', sans-serif;
     --small: 14px;
     --medium: 18px;
+    --themes-main-color: #000;
+    --color-button-text: #fff;
+    --bg-color: #fff;
+    --normal_weight: 400;
+    --bold_weight: 700;
+    --bg-gradient: repeating-linear-gradient(
+        90deg,
+        #fff 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
+      linear-gradient(180deg, #fff 0%, #1a1a1a 100%);
 }
