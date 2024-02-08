@@ -1,3 +1,3 @@
 # zakrivayuschiy-teg-f
 Проект "Закрывающий тег"
-https://github.com/KachuriruDayo/zakrivayuschiy-teg-f.git
+Данный проект создан для отработки навыков декорирования страницы с использлванием CSS и анимаций. 
